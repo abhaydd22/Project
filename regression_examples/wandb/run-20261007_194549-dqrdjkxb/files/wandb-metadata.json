@@ -1,0 +1,28 @@
+{
+  "os":  "Windows-10-10.0.26200-SP0",
+  "python":  "CPython 3.11.15",
+  "startedAt":  "2026-10-07T18:45:49.116321Z",
+  "program":  "d:\\Abhay_New\\Abhay\\Project\\regression_examples\\12_linearregression_wandb.ipynb",
+  "codePath":  "d:\\Abhay_New\\Abhay\\Project\\regression_examples\\12_linearregression_wandb.ipynb",
+  "codePathLocal":  "12_linearregression_wandb.ipynb",
+  "git":  {
+    "remote":  "https://github.com/abhaydd22/Project.git",
+    "commit":  "ae41b1709080f7187cf0e9e8755262ad0bc30d61"
+  },
+  "email":  "abhaydduk@gmail.com",
+  "root":  "d:\\Abhay_New\\Abhay\\Project\\regression_examples",
+  "host":  "ABHAY-PC",
+  "executable":  "c:\\Users\\admin\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+  "cpu_count":  4,
+  "cpu_count_logical":  8,
+  "disk":  {
+    "/":  {
+      "total":  "814493986816",
+      "used":  "436130865152"
+    }
+  },
+  "memory":  {
+    "total":  "16985645056"
+  },
+  "writerId":  "tecrswgc1rn2bzm1m6ocivsoeeblef55"
+}
