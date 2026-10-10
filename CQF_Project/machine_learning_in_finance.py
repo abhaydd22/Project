@@ -14,7 +14,7 @@ import yfinance as yf
 SYMBOLS     = ["SOXX", "QQQ"]
 START, END  = "2015-01-01", "2026-10-10"
 TRADING_DAYS = 252
-CHART_DIR   = "D:/Abhay_New/Abhay/CQF/Module 4/Exam3/charts/"
+CHART_DIR   = "D:/Abhay_New/Abhay/Project/CQF_Project/"
 os.makedirs(CHART_DIR, exist_ok=True)
 
 # Download the historical data for the specified symbols using yfinance.
@@ -130,7 +130,7 @@ ax.set_title("63-day rolling annualised volatility (%)")
 ax.grid(alpha=0.3)
 fig.tight_layout(); fig.savefig(f"{CHART_DIR}/05_rolling_vol.png", dpi=130); plt.close(fig)
 
-# Calculate the monthly log returns and compute the correlation between SOXX and QQQ on both monthly and daily bases.  
+# Calculate the monthly log returns and compute the correlation between SOXX and QQQ on monthly bases.  
 monthly = np.log(close / close.shift(1)).resample("ME").sum()
 corr = monthly["SOXX"].corr(monthly["QQQ"])
 corr_daily = log_ret["SOXX"].corr(log_ret["QQQ"])
