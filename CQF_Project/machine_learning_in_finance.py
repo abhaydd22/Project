@@ -11,6 +11,7 @@ warnings.filterwarnings("ignore")
 import yfinance as yf
 from scipy.signal import savgol_filter
 from scipy.stats import multivariate_normal
+pip install hmmlearn statsmodels
 from hmmlearn.hmm import GaussianHMM
 from statsmodels.tsa.stattools import adfuller
 from sklearn.feature_selection import mutual_info_classif
