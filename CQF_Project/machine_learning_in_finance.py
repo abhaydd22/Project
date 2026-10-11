@@ -11,7 +11,6 @@ warnings.filterwarnings("ignore")
 import yfinance as yf
 from scipy.signal import savgol_filter
 from scipy.stats import multivariate_normal
-pip install hmmlearn statsmodels
 from hmmlearn.hmm import GaussianHMM
 from statsmodels.tsa.stattools import adfuller
 from sklearn.feature_selection import mutual_info_classif
@@ -413,7 +412,10 @@ def main():
     close   = g.get("close")   or (pd.read_pickle("data_close.pkl")     if os.path.exists("data_close.pkl")     else None)
     log_ret = g.get("log_ret") or (pd.read_pickle("data_logret.pkl")    if os.path.exists("data_logret.pkl")    else None)
     volume  = g.get("volume")  or (pd.read_pickle("data_volume.pkl")    if os.path.exists("data_volume.pkl")    else None)
-
+    if close   is None and os.path.exists("data_close.pkl"):  close   = pd.read_pickle("data_close.pkl")
+    if log_ret is None and os.path.exists("data_logret.pkl"): log_ret = pd.read_pickle("data_logret.pkl")
+    if volume  is None and os.path.exists("data_volume.pkl"): volume  = pd.read_pickle("data_volume.pkl")
+    
     matrix, feat = build_matrix(close, log_ret, None, volume)
     matrix.to_pickle("feature_matrix.pkl")
     matrix.to_csv("feature_matrix.csv")
