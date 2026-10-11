@@ -431,6 +431,7 @@ def main():
     print(rank.to_string(index=False, float_format=lambda v: f"{v:.4f}"))
     return matrix, rank
 
+    print("\n=== RUNNING MAIN ===")
 
 if __name__ == "__main__":
     main()
