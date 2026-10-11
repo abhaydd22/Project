@@ -409,9 +409,9 @@ def mi_filter(matrix):
 def main():
     # try to use DataFrames already in scope; else load the four pickles
     g = globals()
-    close   = g.get("close")   or (pd.read_pickle("data_close.pkl")     if os.path.exists("data_close.pkl")     else None)
-    log_ret = g.get("log_ret") or (pd.read_pickle("data_logret.pkl")    if os.path.exists("data_logret.pkl")    else None)
-    volume  = g.get("volume")  or (pd.read_pickle("data_volume.pkl")    if os.path.exists("data_volume.pkl")    else None)
+    close   = g.get("close")
+    log_ret = g.get("log_ret")
+    volume  = g.get("volume")
     if close   is None and os.path.exists("data_close.pkl"):  close   = pd.read_pickle("data_close.pkl")
     if log_ret is None and os.path.exists("data_logret.pkl"): log_ret = pd.read_pickle("data_logret.pkl")
     if volume  is None and os.path.exists("data_volume.pkl"): volume  = pd.read_pickle("data_volume.pkl")
